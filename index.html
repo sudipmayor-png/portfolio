@@ -2,8 +2,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sudip Mayor — Computer Science Graduate, Cambridge UK</title>
-<meta name="description" content="Portfolio of Sudip Mayor — Computer Science graduate specialising in software testing, networking, and data systems.">
+<title>Sudip Mayor | Computer Science Graduate, Cambridge UK</title>
+<meta name="description" content="Portfolio of Sudip Mayor, Computer Science graduate specialising in software testing, networking and data systems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -47,6 +47,11 @@
     backdrop-filter:blur(6px);
     border-bottom:1px solid var(--rule);
   }
+  .statusbar{background:var(--ink); color:var(--paper); font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px; letter-spacing:0.08em;}
+  .statusbar .wrap{display:flex; justify-content:space-between; gap:16px;
+    padding:6px 28px; flex-wrap:wrap;}
+  .statusbar .g{color:var(--signal);}
   nav .wrap{display:flex; align-items:center; justify-content:space-between; height:56px; gap:18px;}
   nav .brand{font-family:'IBM Plex Mono', monospace; font-weight:600; font-size:14px; letter-spacing:0.02em; text-decoration:none; flex-shrink:0;}
   nav .brand span{color:var(--signal);}
@@ -79,6 +84,14 @@
     color:var(--ink-soft);
   }
   .badge.ok{border-color:var(--signal); color:var(--signal); background:var(--signal-dim);}
+ 
+  .avail{display:inline-flex; align-items:center; gap:8px; font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px; letter-spacing:0.07em; text-transform:uppercase; color:var(--signal);
+    background:var(--signal-dim); border:1px solid rgba(47,125,92,0.3);
+    padding:6px 13px; border-radius:3px; margin-bottom:30px;}
+  .blip{width:7px; height:7px; border-radius:50%; background:var(--signal);
+    animation:blip 2s ease-in-out infinite;}
+  @keyframes blip{0%,100%{opacity:1;} 50%{opacity:0.25;}}
  
   .readout-grid{
     display:grid; grid-template-columns:repeat(4, 1fr); gap:1px;
@@ -159,6 +172,21 @@
   .cert-list li::before{content:"✓"; color:var(--signal); font-weight:700; flex-shrink:0;}
   .cert-list li.progress::before{content:"…"; color:var(--amber); font-weight:700;}
  
+ 
+  /* -------- contact card -------- */
+  .contact-card-box{background:var(--paper-raised); border:1px solid var(--rule);
+    border-radius:10px; padding:20px; max-width:330px;}
+  .cline{display:flex; align-items:center; gap:13px; padding:8px 2px;
+    text-decoration:none; color:var(--ink); font-size:15px;}
+  .cline svg{width:17px; height:17px; fill:var(--ink); flex-shrink:0;}
+  .cline span{overflow-wrap:anywhere;}
+  .cline:hover{color:var(--signal);}
+  .cline:hover svg{fill:var(--signal);}
+  .cbtn{display:block; margin-top:16px; background:var(--ink); color:var(--paper);
+    text-align:center; text-decoration:none; font-weight:600; font-size:16px;
+    padding:13px 18px; border-radius:8px; transition:background .15s;}
+  .cbtn:hover{background:#2C3830;}
+ 
   /* -------- contact -------- */
   footer{padding:60px 0 70px;}
   .contact-grid{display:flex; flex-wrap:wrap; gap:14px; margin-top:24px;}
@@ -173,6 +201,13 @@
 </style>
 </head>
 <body>
+ 
+<div class="statusbar">
+  <div class="wrap">
+    <span>CAMBRIDGE CB1 · FULL UK RIGHT TO WORK</span>
+    <span class="g">STATUS: AVAILABLE FOR HIRE</span>
+  </div>
+</div>
  
 <nav>
   <div class="wrap">
@@ -190,9 +225,11 @@
  
 <header class="hero" id="top">
   <div class="wrap">
-    <div class="eyebrow">Cambridge, UK — Full Right to Work</div>
+    <div class="eyebrow">Cambridge, UK · Full Right to Work</div>
     <h1 class="name">Sudip Mayor</h1>
-    <p class="role-line">Computer Science graduate working across software testing, networking, and data systems — evaluating AI systems daily as an Image AI Tester at Outlier AI.</p>
+    <p class="role-line">Computer Science graduate working across software testing, networking and data systems. Currently freelancing on AI evaluation and looking for a permanent role.</p>
+ 
+    <div class="avail"><span class="blip"></span>available for hire</div>
  
     <div class="badge-row">
       <span class="badge ok">BEng (Hons) Computer Science, 2:1</span>
@@ -225,7 +262,7 @@
 <section id="about">
   <div class="wrap">
     <div class="sec-head"><span class="sec-tag mono">01</span><h2>About</h2></div>
-    <p class="about-text">I'm a Computer Science graduate based in Cambridge, currently working as a freelance Image AI Tester with Outlier AI — evaluating AI-generated outputs against defined quality standards, applying structured, evidence-based analysis, and writing up findings that directly shape what gets fixed. My degree background spans networking, systems administration, database design, and applied security, built through hands-on labs rather than theory alone. Before that, I spent a year and a half in live, customer-facing technical support at Vodafone. I like work where a conclusion has to be backed by evidence — a log, a query result, a captured packet — not just asserted.</p>
+    <p class="about-text">I test things and figure out why they break. Right now that means evaluating AI image output against defined quality standards as a freelance tester with Outlier AI, tracing root causes and writing the evaluation procedures the rest of the team works from. My degree covered networking, systems administration, database design and applied security, all built through hands on labs rather than lecture notes, and before that I spent a year and a half on the front line of technical support at Vodafone fixing 20+ problems a day for people standing in front of me. I like work where a conclusion has to be backed by evidence you can point at: a log, a query result, a captured packet. I am looking for a permanent role where I can go deeper into that.</p>
   </div>
 </section>
  
@@ -237,7 +274,7 @@
       <div class="tl-item">
         <div class="tl-head">
           <div><span class="tl-role">Image AI Tester</span> · <span class="tl-org">Outlier AI</span></div>
-          <div class="tl-date mono">Jan 2026 — Present</div>
+          <div class="tl-date mono">Jan 2026 to Present</div>
         </div>
         <div class="tl-loc">Remote · Freelance, Project Aether</div>
         <ul class="bullets">
@@ -250,7 +287,7 @@
       <div class="tl-item">
         <div class="tl-head">
           <div><span class="tl-role">Customer and Technical Support Colleague</span> · <span class="tl-org">Vodafone</span></div>
-          <div class="tl-date mono">Jun 2024 — Jan 2026</div>
+          <div class="tl-date mono">Jun 2024 to Jan 2026</div>
         </div>
         <div class="tl-loc">Cambridge, UK</div>
         <ul class="bullets">
@@ -264,7 +301,7 @@
       <div class="tl-item">
         <div class="tl-head">
           <div><span class="tl-role">Team Leader</span> · <span class="tl-org">Aromi</span></div>
-          <div class="tl-date mono">Apr 2024 — Apr 2025</div>
+          <div class="tl-date mono">Apr 2024 to Apr 2025</div>
         </div>
         <div class="tl-loc">Cambridge, UK</div>
         <ul class="bullets">
@@ -276,7 +313,7 @@
       <div class="tl-item">
         <div class="tl-head">
           <div><span class="tl-role">Operations and Logistics Support</span> · <span class="tl-org">Family Businesses</span></div>
-          <div class="tl-date mono">2018 — Present</div>
+          <div class="tl-date mono">2018 to Present</div>
         </div>
         <div class="tl-loc">Watkins Mayor Manufacturing &amp; Greenfields School, India · Remote, ongoing</div>
         <ul class="bullets">
@@ -298,55 +335,55 @@
         <div class="card-top"><h3>Web Browser Performance Benchmarking System</h3></div>
         <div class="tags"><span class="tag">Python</span><span class="tag">Selenium</span><span class="tag">psutil</span></div>
         <p class="desc">Automated data collection pipeline benchmarking performance across 5 browsers and 3 system configurations, including a real defect found and fixed during testing.</p>
-        <div class="output-line">OUTPUT: <b>70% faster</b> testing · <b>2,000+</b> data points · 40-page report</div>
+        <div class="output-line">OUTPUT: <b>70% faster</b> testing · <b>2,000+</b> data points · 40 page report</div>
       </div>
  
       <div class="card">
         <div class="card-top"><h3>Retail and Commercial Database Systems</h3></div>
         <div class="tags"><span class="tag">SQL</span><span class="tag">Relational Design</span></div>
-        <p class="desc">12-table relational database with validation procedures and automated reporting, plus a separate multi-entity commercial schema across 3 retail businesses.</p>
+        <p class="desc">12 table relational database with validation procedures and automated reporting, plus a separate multi entity commercial schema across 3 retail businesses.</p>
         <div class="output-line">OUTPUT: <b>12 tables</b>, verified to <b>3NF</b> · complex joins</div>
       </div>
  
       <div class="card">
-        <div class="card-top"><h3>Ethical Hacking &amp; Penetration Testing Labs</h3></div>
+        <div class="card-top"><h3>Ethical Hacking and Penetration Testing Labs</h3></div>
         <div class="tags"><span class="tag">Kali Linux</span><span class="tag">Nmap</span><span class="tag">Wireshark</span><span class="tag">Metasploit</span></div>
         <p class="desc">Network reconnaissance, vulnerability scanning, password auditing, and privilege escalation across 10+ controlled lab environments, including a named client case study.</p>
         <div class="output-line">OUTPUT: <b>100MB+</b> traffic analysed · full professional report</div>
       </div>
  
       <div class="card">
-        <div class="card-top"><h3>IT &amp; Networking Laboratory Work</h3></div>
+        <div class="card-top"><h3>IT and Networking Laboratory Work</h3></div>
         <div class="tags"><span class="tag">Cisco</span><span class="tag">TCP/IP</span><span class="tag">DNS/DHCP</span><span class="tag">AWS</span></div>
-        <p class="desc">Structured networking and systems administration across 3 operating systems — configuration, routing and switching, user administration, and VM management.</p>
+        <p class="desc">Structured networking and systems administration across 3 operating systems: configuration, routing and switching, user administration, and VM management.</p>
         <div class="output-line">OUTPUT: <b>3 OS environments</b> · live Cisco config</div>
       </div>
  
       <div class="card">
         <div class="card-top"><h3>Job Consultancy Application</h3></div>
         <div class="tags"><span class="tag">C++</span><span class="tag">Git</span><span class="tag">Agile</span></div>
-        <p class="desc">Team-built job consultancy application for Redgate Software, working through sprint planning and implementation in an agile environment.</p>
+        <p class="desc">Team built job consultancy application for Redgate Software, working through sprint planning and implementation in an agile environment.</p>
         <div class="output-line">OUTPUT: group project · agile delivery</div>
       </div>
  
       <div class="card">
         <div class="card-top"><h3>2D Drawing Application</h3></div>
         <div class="tags"><span class="tag">C#</span><span class="tag">OOP</span><span class="tag">GUI</span></div>
-        <p class="desc">Fully functional 2D drawing application with 5 core features — shape drawing, rotation, duplication, deletion, and file save.</p>
+        <p class="desc">Fully functional 2D drawing application with 5 core features: shape drawing, rotation, duplication, deletion, and file save.</p>
         <div class="output-line">OUTPUT: 5 core features shipped</div>
       </div>
  
       <div class="card">
-        <div class="card-top"><h3>Real-Time Webcam Tracking System</h3></div>
+        <div class="card-top"><h3>Real Time Webcam Tracking System</h3></div>
         <div class="tags"><span class="tag">MATLAB</span><span class="tag">Computer Vision</span></div>
-        <p class="desc">Real-time colour detection and movement tracking application built with MATLAB and live webcam input.</p>
-        <div class="output-line">OUTPUT: real-time tracking, live input</div>
+        <p class="desc">Real time colour detection and movement tracking application built with MATLAB and live webcam input.</p>
+        <div class="output-line">OUTPUT: real time tracking, live input</div>
       </div>
  
       <div class="card">
         <div class="card-top"><h3>Blue Foam Finger Detection System</h3></div>
         <div class="tags"><span class="tag">MATLAB</span><span class="tag">Object Detection</span></div>
-        <p class="desc">Real-time object detection system, iterating on detection algorithms across structured testing cycles to improve accuracy.</p>
+        <p class="desc">Real time object detection system, iterating on detection algorithms across structured testing cycles to improve accuracy.</p>
         <div class="output-line">OUTPUT: iterative accuracy improvement</div>
       </div>
  
@@ -365,7 +402,7 @@
         </div>
       </div>
       <div class="skill-group">
-        <h4>Security &amp; Diagnostics</h4>
+        <h4>Security and Diagnostics</h4>
         <div class="skill-tags">
           <span class="skill-tag">Vulnerability Assessment</span><span class="skill-tag">Nmap</span><span class="skill-tag">OpenVAS</span><span class="skill-tag">Wireshark</span><span class="skill-tag">Metasploit</span>
         </div>
@@ -383,7 +420,7 @@
         </div>
       </div>
       <div class="skill-group">
-        <h4>Platforms &amp; Cloud</h4>
+        <h4>Platforms and Cloud</h4>
         <div class="skill-tags">
           <span class="skill-tag">Microsoft 365</span><span class="skill-tag">Active Directory</span><span class="skill-tag">Azure</span><span class="skill-tag">AWS (foundational)</span><span class="skill-tag">Google Workspace</span>
         </div>
@@ -400,7 +437,7 @@
  
 <section id="education">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-tag mono">05</span><h2>Education &amp; Certifications</h2></div>
+    <div class="sec-head"><span class="sec-tag mono">05</span><h2>Education and Certifications</h2></div>
     <div class="edu-grid">
       <div>
         <div class="edu-item">
@@ -409,18 +446,18 @@
         </div>
         <div class="edu-item">
           <div class="inst">Cambridge School India</div>
-          <div class="deg">Grade 12 — Physics, Chemistry, Mathematics, English · 85% overall</div>
+          <div class="deg">Grade 12. Physics, Chemistry, Mathematics and English. 85% overall</div>
         </div>
       </div>
       <div>
         <ul class="cert-list">
           <li>Google IT Support Professional Certificate</li>
           <li>Cisco Networking Academy Certification</li>
-          <li>AI Testing and Evaluation Training — Outlier AI</li>
-          <li>MATLAB Onramp — MathWorks</li>
-          <li>Introduction to Python — freeCodeCamp</li>
-          <li class="progress">Microsoft Azure Fundamentals (AZ-900) — in progress</li>
-          <li class="progress">CompTIA A+ — in progress</li>
+          <li>AI Testing and Evaluation Training, Outlier AI</li>
+          <li>MATLAB Onramp, MathWorks</li>
+          <li>Introduction to Python, freeCodeCamp</li>
+          <li class="progress">Microsoft Azure Fundamentals (AZ-900), in progress</li>
+          <li class="progress">CompTIA A+, in progress</li>
         </ul>
       </div>
     </div>
@@ -430,21 +467,28 @@
 <footer id="contact">
   <div class="wrap">
     <div class="sec-head"><span class="sec-tag mono">06</span><h2>Contact</h2></div>
-    <p class="lede" style="margin-bottom:0;">Based in Cambridge, UK — commutable by train across Cambridge and London.</p>
-    <div class="contact-grid">
-      <a class="contact-card" href="mailto:sudip.mayor@gmail.com">
-        <span class="k mono">Email</span><span class="v">sudip.mayor@gmail.com</span>
+    <p class="lede">Based in Cambridge, UK. Commutable by train across Cambridge and London.</p>
+ 
+    <div class="contact-card-box">
+      <a class="cline" href="https://linkedin.com/in/sudip-mayor-25852323b" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM2.4 9.5h5.16V21H2.4V9.5zM9.9 9.5h4.95v1.57h.07c.69-1.24 2.38-2.55 4.9-2.55 5.24 0 6.2 3.3 6.2 7.6V21h-5.16v-4.9c0-1.17-.02-2.67-1.7-2.67-1.7 0-1.96 1.27-1.96 2.58V21H9.9V9.5z"/></svg>
+        <span>sudip-mayor</span>
       </a>
-      <a class="contact-card" href="tel:+447436989365">
-        <span class="k mono">Phone</span><span class="v">+44 7436 989365</span>
+      <a class="cline" href="https://github.com/sudipmayor-png" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5A10.5 10.5 0 0 0 1.5 12c0 4.64 3.01 8.57 7.18 9.96.53.1.72-.23.72-.51v-1.8c-2.92.63-3.54-1.4-3.54-1.4-.48-1.22-1.17-1.55-1.17-1.55-.96-.65.07-.64.07-.64 1.06.08 1.62 1.09 1.62 1.09.94 1.61 2.47 1.15 3.07.88.1-.68.37-1.15.67-1.41-2.33-.27-4.79-1.17-4.79-5.2 0-1.15.41-2.09 1.08-2.83-.11-.27-.47-1.34.1-2.79 0 0 .88-.28 2.89 1.08a10 10 0 0 1 5.26 0c2-1.36 2.88-1.08 2.88-1.08.58 1.45.22 2.52.11 2.79.68.74 1.08 1.68 1.08 2.83 0 4.04-2.46 4.93-4.81 5.19.38.33.72.97.72 1.96v2.9c0 .29.19.62.73.51A10.5 10.5 0 0 0 22.5 12 10.5 10.5 0 0 0 12 1.5z"/></svg>
+        <span>sudipmayor-png</span>
       </a>
-      <a class="contact-card" href="https://linkedin.com/in/sudip-mayor-25852323b" target="_blank" rel="noopener">
-        <span class="k mono">LinkedIn</span><span class="v">/in/sudip-mayor-25852323b</span>
+      <a class="cline" href="tel:+447436989365">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.44 2.83 3.77 5.15 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.4 21 3 13.6 3 4.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.11.35.03.75-.25 1.02l-2.22 2.2z"/></svg>
+        <span>+44 7436 989365</span>
       </a>
-      <a class="contact-card" href="https://github.com/sudipmayor-png" target="_blank" rel="noopener">
-        <span class="k mono">GitHub</span><span class="v">sudipmayor-png</span>
+      <a class="cline" href="mailto:sudip.mayor@gmail.com">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1H3c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1zm9 8.1L4.4 7h15.2L12 13.1zM4 17h16V9.1l-7.4 5.9c-.35.28-.85.28-1.2 0L4 9.1V17z"/></svg>
+        <span>sudip.mayor@gmail.com</span>
       </a>
+      <a class="cbtn" href="mailto:sudip.mayor@gmail.com?subject=Role%20enquiry">Contact Me</a>
     </div>
+ 
     <div class="foot-note">Full Right to Work in the UK · Cambridge (CB1)</div>
   </div>
 </footer>
