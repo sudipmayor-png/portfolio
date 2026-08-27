@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -39,7 +40,7 @@
   a{color:inherit;}
   .mono{font-family:'IBM Plex Mono', monospace;}
   .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
- 
+
   /* -------- nav -------- */
   nav{
     position:sticky; top:0; z-index:50;
@@ -64,7 +65,7 @@
     nav ul{gap:14px; width:100%; justify-content:flex-start;}
     nav a.link{font-size:10.5px;}
   }
- 
+
   /* -------- hero -------- */
   header.hero{padding:64px 0 44px;}
   .eyebrow{
@@ -84,15 +85,23 @@
     color:var(--ink-soft);
   }
   .badge.ok{border-color:var(--signal); color:var(--signal); background:var(--signal-dim);}
- 
+
+  .hero-actions{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:30px;}
+  .dlbtn{display:inline-flex; align-items:center; gap:8px; font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px; font-weight:600; letter-spacing:0.02em; color:var(--paper-raised);
+    background:var(--ink); padding:8px 15px 8px 12px; border-radius:3px; transition:background .15s;
+    text-decoration:none;}
+  .dlbtn svg{width:14px; height:14px; fill:var(--paper-raised);}
+  .dlbtn:hover{background:#2C3830;}
+
   .avail{display:inline-flex; align-items:center; gap:8px; font-family:'IBM Plex Mono', monospace;
     font-size:11.5px; letter-spacing:0.07em; text-transform:uppercase; color:var(--signal);
     background:var(--signal-dim); border:1px solid rgba(47,125,92,0.3);
-    padding:6px 13px; border-radius:3px; margin-bottom:30px;}
+    padding:6px 13px; border-radius:3px;}
   .blip{width:7px; height:7px; border-radius:50%; background:var(--signal);
     animation:blip 2s ease-in-out infinite;}
   @keyframes blip{0%,100%{opacity:1;} 50%{opacity:0.25;}}
- 
+
   .readout-grid{
     display:grid; grid-template-columns:repeat(4, 1fr); gap:1px;
     background:var(--rule); border:1px solid var(--rule); border-radius:6px; overflow:hidden;
@@ -101,7 +110,7 @@
   .readout .num{font-family:'IBM Plex Mono', monospace; font-weight:700; font-size:26px; color:var(--ink); line-height:1;}
   .readout .lbl{font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-faint); margin-top:8px;}
   @media (max-width:720px){ .readout-grid{grid-template-columns:repeat(2,1fr);} }
- 
+
   /* -------- section shell -------- */
   section{padding:56px 0;}
   section.alt{background:rgba(255,255,255,0.35); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);}
@@ -109,10 +118,10 @@
   .sec-tag{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--amber); letter-spacing:0.08em;}
   h2{font-family:'IBM Plex Mono', monospace; font-size:26px; margin:0; letter-spacing:-0.01em;}
   .lede{color:var(--ink-soft); max-width:680px; margin:-18px 0 34px;}
- 
+
   /* -------- about -------- */
   .about-text{max-width:700px; font-size:16.5px;}
- 
+
   /* -------- experience -------- */
   .timeline{border-left:2px solid var(--rule); padding-left:26px; display:flex; flex-direction:column; gap:36px;}
   .tl-item{position:relative;}
@@ -127,7 +136,7 @@
   .tl-loc{font-size:13px; color:var(--ink-faint); margin-bottom:10px;}
   ul.bullets{margin:8px 0 0; padding-left:20px;}
   ul.bullets li{margin-bottom:6px; color:var(--ink-soft); font-size:15px;}
- 
+
   /* -------- projects -------- */
   .proj-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:18px;}
   @media (max-width:760px){ .proj-grid{grid-template-columns:1fr;} }
@@ -150,7 +159,7 @@
     background:var(--signal-dim); border-radius:3px; padding:7px 10px; margin-top:auto;
   }
   .output-line b{font-weight:700;}
- 
+
   /* -------- skills -------- */
   .skills-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:26px 40px;}
   @media (max-width:700px){ .skills-grid{grid-template-columns:1fr;} }
@@ -160,7 +169,7 @@
   }
   .skill-tags{display:flex; flex-wrap:wrap; gap:8px;}
   .skill-tag{font-size:13.5px; background:var(--paper-raised); border:1px solid var(--rule); padding:5px 11px; border-radius:14px;}
- 
+
   /* -------- education -------- */
   .edu-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:40px;}
   @media (max-width:760px){ .edu-grid{grid-template-columns:1fr;} }
@@ -171,8 +180,8 @@
   .cert-list li{font-size:14px; display:flex; gap:9px; align-items:flex-start;}
   .cert-list li::before{content:"✓"; color:var(--signal); font-weight:700; flex-shrink:0;}
   .cert-list li.progress::before{content:"…"; color:var(--amber); font-weight:700;}
- 
- 
+
+
   /* -------- contact card -------- */
   .contact-card-box{background:var(--paper-raised); border:1px solid var(--rule);
     border-radius:10px; padding:20px; max-width:330px;}
@@ -186,7 +195,7 @@
     text-align:center; text-decoration:none; font-weight:600; font-size:16px;
     padding:13px 18px; border-radius:8px; transition:background .15s;}
   .cbtn:hover{background:#2C3830;}
- 
+
   /* -------- contact -------- */
   footer{padding:60px 0 70px;}
   .contact-grid{display:flex; flex-wrap:wrap; gap:14px; margin-top:24px;}
@@ -201,14 +210,14 @@
 </style>
 </head>
 <body>
- 
+
 <div class="statusbar">
   <div class="wrap">
     <span>CAMBRIDGE CB1 · FULL UK RIGHT TO WORK</span>
     <span class="g">STATUS: AVAILABLE FOR HIRE</span>
   </div>
 </div>
- 
+
 <nav>
   <div class="wrap">
     <a class="brand" href="#top">SUDIP<span>_</span>MAYOR</a>
@@ -222,22 +231,28 @@
     </ul>
   </div>
 </nav>
- 
+
 <header class="hero" id="top">
   <div class="wrap">
     <div class="eyebrow">Cambridge, UK · Full Right to Work</div>
     <h1 class="name">Sudip Mayor</h1>
     <p class="role-line">Computer Science graduate working across software testing, networking and data systems. Currently freelancing on AI evaluation and looking for a permanent role.</p>
- 
-    <div class="avail"><span class="blip"></span>available for hire</div>
- 
+
+    <div class="hero-actions">
+      <div class="avail"><span class="blip"></span>available for hire</div>
+      <a class="dlbtn" href="Sudip_Mayor_CV.pdf" download>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11.6l3.6-3.6L17 12.4 12 17.4 7 12.4l1.4-1.4 3.6 3.6V3h2zM5 19h14v2H5v-2z"/></svg>
+        Download CV
+      </a>
+    </div>
+
     <div class="badge-row">
       <span class="badge ok">BEng (Hons) Computer Science, 2:1</span>
       <span class="badge">Google IT Support Certified</span>
       <span class="badge">Cisco Networking Academy</span>
       <span class="badge">AZ-900 in progress</span>
     </div>
- 
+
     <div class="readout-grid">
       <div class="readout">
         <div class="num">2,000+</div>
@@ -258,19 +273,19 @@
     </div>
   </div>
 </header>
- 
+
 <section id="about">
   <div class="wrap">
     <div class="sec-head"><span class="sec-tag mono">01</span><h2>About</h2></div>
     <p class="about-text">I test things and figure out why they break. Right now that means evaluating AI image output against defined quality standards as a freelance tester with Outlier AI, tracing root causes and writing the evaluation procedures the rest of the team works from. My degree covered networking, systems administration, database design and applied security, all built through hands on labs rather than lecture notes, and before that I spent a year and a half on the front line of technical support at Vodafone fixing 20+ problems a day for people standing in front of me. I like work where a conclusion has to be backed by evidence you can point at: a log, a query result, a captured packet. I am looking for a permanent role where I can go deeper into that.</p>
   </div>
 </section>
- 
+
 <section class="alt" id="experience">
   <div class="wrap">
     <div class="sec-head"><span class="sec-tag mono">02</span><h2>Experience</h2></div>
     <div class="timeline">
- 
+
       <div class="tl-item">
         <div class="tl-head">
           <div><span class="tl-role">Image AI Tester</span> · <span class="tl-org">Outlier AI</span></div>
@@ -283,7 +298,7 @@
           <li>Produce structured findings reports translating raw output data into clear, actionable insight for stakeholders that directly informs corrective releases.</li>
         </ul>
       </div>
- 
+
       <div class="tl-item">
         <div class="tl-head">
           <div><span class="tl-role">Customer and Technical Support Colleague</span> · <span class="tl-org">Vodafone</span></div>
@@ -297,7 +312,7 @@
           <li>Achieved 80% of a £10,000 monthly sales target across mobile, broadband, and device categories within 7 months of joining.</li>
         </ul>
       </div>
- 
+
       <div class="tl-item">
         <div class="tl-head">
           <div><span class="tl-role">Team Leader</span> · <span class="tl-org">Aromi</span></div>
@@ -309,7 +324,7 @@
           <li>Produced weekly operational reports tracking KPIs across service speed, complaint volume, and revenue.</li>
         </ul>
       </div>
- 
+
       <div class="tl-item">
         <div class="tl-head">
           <div><span class="tl-role">Operations and Logistics Support</span> · <span class="tl-org">Family Businesses</span></div>
@@ -321,76 +336,76 @@
           <li>Supported logistics scheduling and procurement coordination across a network of 10+ suppliers.</li>
         </ul>
       </div>
- 
+
     </div>
   </div>
 </section>
- 
+
 <section id="projects">
   <div class="wrap">
     <div class="sec-head"><span class="sec-tag mono">03</span><h2>Projects</h2></div>
     <div class="proj-grid">
- 
+
       <div class="card">
         <div class="card-top"><h3>Web Browser Performance Benchmarking System</h3></div>
         <div class="tags"><span class="tag">Python</span><span class="tag">Selenium</span><span class="tag">psutil</span></div>
         <p class="desc">Automated data collection pipeline benchmarking performance across 5 browsers and 3 system configurations, including a real defect found and fixed during testing.</p>
         <div class="output-line">OUTPUT: <b>70% faster</b> testing · <b>2,000+</b> data points · 40 page report</div>
       </div>
- 
+
       <div class="card">
         <div class="card-top"><h3>Retail and Commercial Database Systems</h3></div>
         <div class="tags"><span class="tag">SQL</span><span class="tag">Relational Design</span></div>
         <p class="desc">12 table relational database with validation procedures and automated reporting, plus a separate multi entity commercial schema across 3 retail businesses.</p>
         <div class="output-line">OUTPUT: <b>12 tables</b>, verified to <b>3NF</b> · complex joins</div>
       </div>
- 
+
       <div class="card">
         <div class="card-top"><h3>Ethical Hacking and Penetration Testing Labs</h3></div>
         <div class="tags"><span class="tag">Kali Linux</span><span class="tag">Nmap</span><span class="tag">Wireshark</span><span class="tag">Metasploit</span></div>
         <p class="desc">Network reconnaissance, vulnerability scanning, password auditing, and privilege escalation across 10+ controlled lab environments, including a named client case study.</p>
         <div class="output-line">OUTPUT: <b>100MB+</b> traffic analysed · full professional report</div>
       </div>
- 
+
       <div class="card">
         <div class="card-top"><h3>IT and Networking Laboratory Work</h3></div>
         <div class="tags"><span class="tag">Cisco</span><span class="tag">TCP/IP</span><span class="tag">DNS/DHCP</span><span class="tag">AWS</span></div>
         <p class="desc">Structured networking and systems administration across 3 operating systems: configuration, routing and switching, user administration, and VM management.</p>
         <div class="output-line">OUTPUT: <b>3 OS environments</b> · live Cisco config</div>
       </div>
- 
+
       <div class="card">
         <div class="card-top"><h3>Job Consultancy Application</h3></div>
         <div class="tags"><span class="tag">C++</span><span class="tag">Git</span><span class="tag">Agile</span></div>
         <p class="desc">Team built job consultancy application for Redgate Software, working through sprint planning and implementation in an agile environment.</p>
         <div class="output-line">OUTPUT: group project · agile delivery</div>
       </div>
- 
+
       <div class="card">
         <div class="card-top"><h3>2D Drawing Application</h3></div>
         <div class="tags"><span class="tag">C#</span><span class="tag">OOP</span><span class="tag">GUI</span></div>
         <p class="desc">Fully functional 2D drawing application with 5 core features: shape drawing, rotation, duplication, deletion, and file save.</p>
         <div class="output-line">OUTPUT: 5 core features shipped</div>
       </div>
- 
+
       <div class="card">
         <div class="card-top"><h3>Real Time Webcam Tracking System</h3></div>
         <div class="tags"><span class="tag">MATLAB</span><span class="tag">Computer Vision</span></div>
         <p class="desc">Real time colour detection and movement tracking application built with MATLAB and live webcam input.</p>
         <div class="output-line">OUTPUT: real time tracking, live input</div>
       </div>
- 
+
       <div class="card">
         <div class="card-top"><h3>Blue Foam Finger Detection System</h3></div>
         <div class="tags"><span class="tag">MATLAB</span><span class="tag">Object Detection</span></div>
         <p class="desc">Real time object detection system, iterating on detection algorithms across structured testing cycles to improve accuracy.</p>
         <div class="output-line">OUTPUT: iterative accuracy improvement</div>
       </div>
- 
+
     </div>
   </div>
 </section>
- 
+
 <section class="alt" id="skills">
   <div class="wrap">
     <div class="sec-head"><span class="sec-tag mono">04</span><h2>Skills</h2></div>
@@ -434,7 +449,7 @@
     </div>
   </div>
 </section>
- 
+
 <section id="education">
   <div class="wrap">
     <div class="sec-head"><span class="sec-tag mono">05</span><h2>Education and Certifications</h2></div>
@@ -463,12 +478,12 @@
     </div>
   </div>
 </section>
- 
+
 <footer id="contact">
   <div class="wrap">
     <div class="sec-head"><span class="sec-tag mono">06</span><h2>Contact</h2></div>
     <p class="lede">Based in Cambridge, UK. Commutable by train across Cambridge and London.</p>
- 
+
     <div class="contact-card-box">
       <a class="cline" href="https://linkedin.com/in/sudip-mayor-25852323b" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM2.4 9.5h5.16V21H2.4V9.5zM9.9 9.5h4.95v1.57h.07c.69-1.24 2.38-2.55 4.9-2.55 5.24 0 6.2 3.3 6.2 7.6V21h-5.16v-4.9c0-1.17-.02-2.67-1.7-2.67-1.7 0-1.96 1.27-1.96 2.58V21H9.9V9.5z"/></svg>
@@ -488,9 +503,10 @@
       </a>
       <a class="cbtn" href="mailto:sudip.mayor@gmail.com?subject=Role%20enquiry">Contact Me</a>
     </div>
- 
+
     <div class="foot-note">Full Right to Work in the UK · Cambridge (CB1)</div>
   </div>
 </footer>
- 
+
 </body>
+</html>
